@@ -14,3 +14,11 @@ fetch('https://picsum.photos/v2/list?page=31')
     console.log(err);
   })
 //21:30
+function imageRendering(data) {
+  data.forEach((imageObject) => {
+    const image = document.createElement ('img');
+    image.src = imageObject.download_url;
+    image.style.width = '200px';
+    document.body.append(image);
+  })
+}
