@@ -34,7 +34,7 @@ function FetchJokes(){
     }
   })
   .then((data) => {
-    const fetchedJokeP = document.createElement ('p');
+    const fetchedJokeP = document.createElement ('div');
     fetchedJokeP.innerHTML = data.value.joke
   
     document.body.append(fetchedJokeP)
