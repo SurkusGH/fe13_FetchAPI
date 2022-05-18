@@ -17,8 +17,8 @@ function FetchJokes(){
     
     let pic = document.createElement ('img');
     pic.src = data[getRandomNum(10)].download_url
-    pic.style.width = '50px';
-    pic.style.height = '50px';
+    pic.style.width = '100px';
+    pic.style.height = '100px';
 
     console.log(data)
     divForContent.appendChild(pic)
@@ -46,6 +46,7 @@ function FetchJokes(){
       const fetchedLink = document.createElement('a')
 
       fetchedLink.textContent = '->LINK<-'
+      fetchedLink.style.color = 'red'
       fetchedLink.href=data.url
       fetchedJokeP.textContent = data.value
       divForContent.appendChild(fetchedLink)
